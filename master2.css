@@ -1,10 +1,49 @@
 
+[data-theme="dark"] {
+  --bg:           #191932;
+  --bg-alt:       #0d1124;
+  --text:         #ffffff;
+  --text-muted:   rgba(255,255,255,0.58);
+  --text-faint:   rgba(255,255,255,0.32);
+  --glass:        rgba(255,255,255,0.06);
+  --glass-border: rgba(255,255,255,0.12);
+  --nav-bg:       rgba(10,10,26,0.80);
+  --card-bg:      rgba(48, 46, 46, 0.05);
+  --card-shadow:  rgba(0,0,0,0.4);
+
+}
+
+:root {
+  --gold:    #f5c842;
+  --gold2:   #e8a500;
+  --violet:  #4f46e5;
+  --violet2: #7c3aed;
+  --sky:     #38bdf8;
+  --red:     #ef4444;
+  --green:   #22c55e;
+}
+
+/* ══════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: auto;
+  transition: background 0.4s, color 0.4s;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
  body {
     font-family: Arial, sans-serif;
-    /* background-color: #6E1A37; */
-     /* background: linear-gradient(90deg, #3dded1, #f545cf); */
-     background: linear-gradient(135deg, #5f4fef, #ab029a, #4444c7);
-
+  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,15 +53,17 @@
 
 
 form {
+
     background-color: white;
     width: 300px;
     padding: 20px;
     border-radius: 20px;
     text-align: center;
+    border: #e8a500 6px;
 }
 h3 {
     /* color: linear-gradient(135deg, #423a88, #ef56e0, #2f2fc4); */
-    color: #da175c;
+    color: #e8a500;
     /* background: linear-gradient(135deg, #2a217b, #494198, #5252e8); */
     margin-bottom: 15px;
 }
@@ -40,10 +81,9 @@ input {
 
 input[type="submit"] {
     /* background-color: #6E1A37; */
-     /* background: linear-gradient(90deg, #00ffea, #ff00c8); */
+     background: linear-gradient(139deg, var(--gold), var(--gold2)); 
        /* background: linear-gradient(135deg, #2a217b, #494198, #5252e8); */
-        background: linear-gradient(135deg, #4937ee, #dc039b, #1d1362);
-    color: white;
+        
 
     cursor: pointer;
     width: 45%;
